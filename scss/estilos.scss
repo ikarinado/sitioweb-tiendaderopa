@@ -1,0 +1,189 @@
+.titulo {
+    color: blueviolet;
+    font-size: 50px;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
+.head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menuPrincipal li {
+    color: blue;
+    text-transform: uppercase;
+    list-style-position: outside;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 30px;
+    list-style: none;
+}
+
+.contenido {
+    font-style: italic;
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+}
+
+.productosCatalogo {
+    background-color: aquamarine;
+}
+
+.muestras {
+    text-align: center;
+    color: rgb(62, 62, 199);
+}
+
+.contactos {
+    color: cornflowerblue;
+    background-color: rgb(182, 177, 169);
+    border-style: outset;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logofooter {
+        float: left;
+        .imagen {
+            width: 200px;
+        }
+    }
+    &__redes {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        margin-left: 20px;
+    }
+}
+
+$redes:(instagram:#681f0d, facebook:#3a5795, whatsapp:#30c23c);
+$colores:(color1:#333333, color2:#666666, color3:#999999);
+@each $clave,
+$valor in $redes {
+    .btn-#{$clave} {
+        background-color: $valor;
+    }
+}
+
+@each $clave2,
+$valor2 in $colores {
+    .#{$clave2} {
+        color: $valor2;
+    }
+}
+
+.principal {
+    background-color: papayawhip;
+    text-align: center;
+    padding: 30px;
+}
+
+.formulario {
+    text-align: right;
+}
+
+.box {
+    &__imagen {
+        max-width: 100%;
+        max-height: 500px;
+    }
+    &__titulo {
+        color: rgb(111, 111, 206);
+        font-size: 50px;
+        margin-bottom: 20px;
+        display: block;
+        text-align: center;
+        padding-top: 5px;
+    }
+    .link {
+        background: black;
+    }
+}
+
+@for $i from 1 through 3 {
+    .box-#{$i} {
+        background-color: rgba(0, 0, 0, $i/10)
+    }
+}
+
+.link {
+    background: #ab3131;
+    color: white;
+    padding: 5px 10px;
+    float: right;
+    margin: 10px;
+    border: none;
+}
+
+.personales {
+    width: 50%;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.datos {
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.datos label {
+    float: left;
+    min-width: 100px;
+    text-align: left;
+}
+
+.datos .campo {
+    float: left;
+}
+
+.collapse {
+    flex-grow: inherit !important;
+}
+
+@media only screen and (max-width: 767px) {
+    body {
+        background-color: #000000;
+    }
+    .head {
+        flex-direction: column;
+    }
+    .menuPrincipal {
+        margin: 0;
+        padding: 0;
+    }
+    .menuPrincipal li {
+        padding: 5px;
+    }
+    .principal img {
+        max-width: 100%;
+    }
+    .productosCatalogo {
+        grid-template-rows: auto;
+    }
+    .productosCatalogo .imagenes {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .contactos {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .productosCatalogo {
+        grid-template-rows: auto;
+    }
+    .productosCatalogo .imagenes {
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+    }
+    .contactos {
+        flex-direction: column;
+    }
+}

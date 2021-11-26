@@ -1,0 +1,160 @@
+.titulo {
+  color: blueviolet;
+  font-size: 50px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center; }
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.menuPrincipal li {
+  color: blue;
+  text-transform: uppercase;
+  list-style-position: outside;
+  text-decoration: none;
+  font-weight: 700;
+  padding: 30px;
+  list-style: none; }
+
+.contenido {
+  font-style: italic;
+  width: 100%;
+  text-align: center;
+  margin-top: 20px;
+  margin-right: 25px;
+  margin-bottom: 30px; }
+
+.productosCatalogo {
+  background-color: aquamarine; }
+
+.muestras {
+  text-align: center;
+  color: #3e3ec7; }
+
+.contactos {
+  color: cornflowerblue;
+  background-color: #b6b1a9;
+  border-style: outset;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  .contactos__logofooter {
+    float: left; }
+    .contactos__logofooter .imagen {
+      width: 200px; }
+  .contactos__redes {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px; }
+
+.btn-instagram {
+  background-color: #681f0d; }
+
+.btn-facebook {
+  background-color: #3a5795; }
+
+.btn-whatsapp {
+  background-color: #30c23c; }
+
+.color1 {
+  color: #333333; }
+
+.color2 {
+  color: #666666; }
+
+.color3 {
+  color: #999999; }
+
+.principal {
+  background-color: papayawhip;
+  text-align: center;
+  padding: 30px; }
+
+.formulario {
+  text-align: right; }
+
+.box__imagen {
+  max-width: 100%;
+  max-height: 500px; }
+
+.box__titulo {
+  color: #6f6fce;
+  font-size: 50px;
+  margin-bottom: 20px;
+  display: block;
+  text-align: center;
+  padding-top: 5px; }
+
+.box .link {
+  background: black; }
+
+.box-1 {
+  background-color: rgba(0, 0, 0, 0.1); }
+
+.box-2 {
+  background-color: rgba(0, 0, 0, 0.2); }
+
+.box-3 {
+  background-color: rgba(0, 0, 0, 0.3); }
+
+.link {
+  background: #ab3131;
+  color: white;
+  padding: 5px 10px;
+  float: right;
+  margin: 10px;
+  border: none; }
+
+.personales {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px; }
+
+.datos {
+  width: 100%;
+  padding: 10px;
+  overflow: hidden; }
+
+.datos label {
+  float: left;
+  min-width: 100px;
+  text-align: left; }
+
+.datos .campo {
+  float: left; }
+
+.collapse {
+  flex-grow: inherit !important; }
+
+@media only screen and (max-width: 767px) {
+  body {
+    background-color: #000000; }
+  .head {
+    flex-direction: column; }
+  .menuPrincipal {
+    margin: 0;
+    padding: 0; }
+  .menuPrincipal li {
+    padding: 5px; }
+  .principal img {
+    max-width: 100%; }
+  .productosCatalogo {
+    grid-template-rows: auto; }
+  .productosCatalogo .imagenes {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr; }
+  .contactos {
+    flex-direction: column; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .productosCatalogo {
+    grid-template-rows: auto; }
+  .productosCatalogo .imagenes {
+    grid-template-rows: auto;
+    grid-template-columns: 1fr; }
+  .contactos {
+    flex-direction: column; } }
